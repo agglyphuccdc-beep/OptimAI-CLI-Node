@@ -11,7 +11,7 @@ Before installing, ensure you have:
 - **Hardware**:
   - **RAM**: 4 GB minimum (8 GB recommended).
   - **CPU**: 2 Cores or more.
-  - **Disk Space**: 10 GB free space.
+  - **Disk Space**: 15 GB free space.
 - **Operating System**:
   - Windows 10/11
   - macOS 12+ (Intel or Apple Silicon)
