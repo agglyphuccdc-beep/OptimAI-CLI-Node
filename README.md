@@ -72,7 +72,13 @@ Open a terminal and run:
 optimai-cli auth login
 ```
 
-Enter your email and password when prompted.
+This will open your browser to sign in via the OptimAI Node Dashboard. After signing in, you'll be redirected back and the CLI will automatically complete the login process.
+
+**Legacy login (email/password):**
+If you prefer to use email/password instead of browser login:
+```bash
+optimai-cli auth login --legacy
+```
 
 ### 2) Start the node
 
@@ -122,9 +128,19 @@ Press `Ctrl+C` in the terminal where the node is running.
 Account:
 
 ```bash
+# Sign in via browser (default)
 optimai-cli auth login
+
+# Sign in using email/password (legacy)
+optimai-cli auth login --legacy
+
+# Check login status
 optimai-cli auth status
+
+# View account info
 optimai-cli auth me
+
+# Sign out
 optimai-cli auth logout
 ```
 
@@ -155,6 +171,7 @@ optimai-cli update
 
 ## Troubleshooting
 
+- **Browser login not working**: If browser login fails or the dashboard doesn't support it yet, use the legacy email/password method with `optimai-cli auth login --legacy`.
 - **Docker not running**: If `optimai-cli node status` shows Docker as `not_running`, start Docker Desktop and retry.
 - **Node already running**: If you see "Another node instance is already running", a node process is active in the background.
   - Run `optimai-cli node status` to check the Process ID (PID).
